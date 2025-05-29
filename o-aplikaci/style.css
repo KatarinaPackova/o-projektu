@@ -1,5 +1,13 @@
 /* Používáme intuitivní výpočet rozměrů prvků. */
-*, *:before, *:after {
+:root {
+  --background-primary: #DAB5AF;
+  --background-secondary: #D2CEE9;
+  --text: #1f2403;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -8,7 +16,53 @@ html {
 }
 
 .container {
-  max-width: 20rem;
-  margin-right: auto;
-  margin-left: auto;
+  background-color: var(--background-primary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  width: 90%;
+  padding: 2.5rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-name {
+  color: #1F06AC;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+footer {
+  background-color: var(--background-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.article {
+  background-color: var(--background-secondary);
+  width: 80%;
+  padding: 2.5rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 8px;
 }
