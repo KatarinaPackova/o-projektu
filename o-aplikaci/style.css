@@ -3,8 +3,10 @@
   --background-primary: #DAB5AF;
   --background-secondary: #D2CEE9;
   --text: #1f2403;
+  --text-navigation: #0808b4;
 }
 
+/* odstranit bílý okraj */
 * {
   margin: 0;
 }
@@ -21,7 +23,8 @@ html {
 
 .container {
   background-color: var(--background-primary);
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,7 +35,6 @@ header {
   width: 90%;
   padding: 2.5rem 1.5rem;
   font-size: 1.5rem;
-
 }
 
 .menu {
@@ -42,17 +44,7 @@ header {
 }
 
 .project-name {
-  color: #1F06AC;
-}
-
-h1,
-h2 {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  color: var(--text-navigation);
 }
 
 .navigation {
@@ -80,4 +72,72 @@ main {
   padding: 2.5rem 1.5rem;
   font-size: 1.5rem;
   border-radius: 8px;
+}
+
+/* han stylování */
+
+.navigation {
+  text-align: right;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+header.menu {
+  align-items: baseline;
+}
+
+/* jiný font na nadpisy */
+
+h1,
+h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-navigation);
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: rgb(26, 26, 109)
+}
+
+.han__photo {
+  height: 60vh;
+  width: auto;
+  border-radius: 1000px;
+  margin: 20px;
+  object-fit: cover;
+}
+
+.han__article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.han__main {
+  flex-direction: column;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .han__main {
+    flex-direction: row;
+    width: 80vw;
+  }
 }
