@@ -74,7 +74,12 @@ main {
   border-radius: 8px;
 }
 
-/* han stylování */
+/* han stylování hlavičky */
+.menu {
+  text-align: right;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 
 .navigation {
   text-align: right;
@@ -82,16 +87,14 @@ main {
   justify-content: flex-end;
 }
 
-header.menu {
-  align-items: baseline;
-}
-
+/* stylování patičky */
 footer {
   background-color: transparent;
+  padding-inline: 10px;
+  text-align: center;
 }
 
 /* jiný font na nadpisy */
-
 h1,
 h2 {
   font-family: "Bricolage Grotesque", sans-serif;
@@ -103,6 +106,7 @@ h2 {
   margin: 0;
 }
 
+/* stylování odkazů */
 a {
   text-decoration: none;
   color: var(--text-navigation);
@@ -114,6 +118,7 @@ a:active {
   color: rgb(26, 26, 109)
 }
 
+/* stylování fotky*/
 .han__photo {
   height: 60vh;
   width: auto;
@@ -122,6 +127,7 @@ a:active {
   object-fit: cover;
 }
 
+/* stylování textu*/
 .han__article {
   display: flex;
   align-items: center;
@@ -131,6 +137,8 @@ a:active {
   background-color: transparent;
 }
 
+
+/* stylování pozadí */
 .han__container {
   background-image: radial-gradient(farthest-corner at 55% 60%, #77778e, var(--background-primary))
 }
@@ -144,7 +152,16 @@ a:active {
   padding: 0;
 }
 
+/* responzivnější zalamování */
 @media (min-width: 800px) {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap
+  }
+
   .han__main {
     flex-direction: row;
     width: 80vw;
