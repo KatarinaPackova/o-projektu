@@ -168,3 +168,39 @@ a:active {
     width: 80vw;
   }
 }
+
+/* katka.html stylovani */
+.katka--foto {
+  width: 15rem;
+  height: 15rem;
+  background-image: url(./katka.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.profile--katka {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* stylovani uvod */
+.spolu--foto {
+  width: 15rem;
+  height: 15rem;
+  background-image: url(./foto1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
