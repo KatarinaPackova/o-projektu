@@ -76,9 +76,10 @@ main {
 
 /* han stylování hlavičky */
 .menu {
+
   text-align: right;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .navigation {
