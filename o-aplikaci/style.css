@@ -1,7 +1,7 @@
-/* Používáme intuitivní výpočet rozměrů prvků. */
+/* variables */
 :root {
   --background-primary: #DAB5AF;
-  --background-secondary: #D2CEE9;
+  --background-secondary: #77778e;
   --text: #1f2403;
   --text-navigation: #0808b4;
 }
@@ -22,7 +22,7 @@ html {
 }
 
 .container {
-  background-color: var(--background-primary);
+  background-image: radial-gradient(farthest-corner at 55% 60%, var(--background-secondary), var(--background-primary));
   height: 100%;
   min-height: 100vh;
   display: flex;
@@ -31,16 +31,19 @@ html {
   align-items: center;
 }
 
+/* hlavička a menu */
 header {
-  width: 90%;
-  padding: 2.5rem 1.5rem;
-  font-size: 1.5rem;
+  width: 95%;
+  padding: 1.5rem 1rem;
+  font-size: 1.4rem;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  text-align: right;
+  flex-wrap: nowrap;
 }
 
 .project-name {
@@ -49,50 +52,45 @@ header {
 
 .navigation {
   display: flex;
-  justify-content: space-evenly;
   gap: 15px;
-}
-
-footer {
-  background-color: var(--background-primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.article {
-  background-color: var(--background-secondary);
-  width: 80%;
-  padding: 2.5rem 1.5rem;
-  font-size: 1.5rem;
-  border-radius: 8px;
-}
-
-/* han stylování hlavičky */
-.menu {
-
-  text-align: right;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.navigation {
   text-align: right;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-/* stylování patičky */
+ul {
+  padding-inline-start: 20px;
+}
+
+/* patička */
 footer {
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   padding-inline: 10px;
   text-align: center;
+}
+
+/* obsah stránky */
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: center;
+  align-items: end;
+  width: 95%;
+  padding: 0;
+}
+
+.article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.4rem;
 }
 
 /* jiný font na nadpisy */
@@ -120,56 +118,40 @@ a:active {
 }
 
 /* stylování fotky*/
-.han__photo {
-  height: 60vh;
-  width: auto;
+.photo {
   border-radius: 50% 0 50% 0;
   margin: 20px;
   object-fit: cover;
-}
-
-/* stylování textu*/
-.han__article {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0;
-  padding: 10px;
-  background-color: transparent;
-}
-
-
-/* stylování pozadí */
-.han__container {
-  background-image: radial-gradient(farthest-corner at 55% 60%, #77778e, var(--background-primary))
-}
-
-.han__main {
-  flex-direction: column;
-  margin: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  padding: 0;
+  object-position: center;
 }
 
 /* responzivnější zalamování */
 @media (min-width: 800px) {
   .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     text-align: center;
     flex-wrap: nowrap
   }
 
-  .han__main {
+  main {
     flex-direction: row;
+    align-items: center;
     width: 80vw;
+  }
+
+  .article {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+
+  header {
+    width: 90%;
+    padding: 2.5rem 2rem;
+    font-size: 1.5rem;
   }
 }
 
 /* katka.html stylovani */
+/*
 .katka--foto {
   width: 15rem;
   height: 15rem;
@@ -186,8 +168,9 @@ a:active {
   justify-content: space-between;
   align-items: end;
 }
-
+*/
 /* stylovani uvod */
+/*
 .spolu--foto {
   width: 15rem;
   height: 15rem;
@@ -198,9 +181,11 @@ a:active {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
 }
-
+*/
+/*
 .profile {
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
+*/
